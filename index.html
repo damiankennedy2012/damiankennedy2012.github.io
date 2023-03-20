@@ -5,6 +5,7 @@
 <body style='height: 100%; background-color: #333; font-family: monospace; margin: 0; padding: 0; '>
     <div style='display: flex; height: 100%; '>
         <div style='width: 20%; height: 100%;' id='l'>
+            <div style='margin: 4px 4px 18px 4px;'><a style='color: #fff; text-decoration: none;' href='?'>New</a></div>
         </div>
         <div style='width: 80%; height: 100%;'>
             <div style='display: flex; width: 100%; height: 40; column-gap: 0'>
@@ -22,8 +23,6 @@
         const divList = document.getElementById('l');
         const textboxTitle = document.getElementById('t');
         const textboxContent = document.getElementById('c');
-
-        divList.innerHTML += '<div style=\'margin: 4px 4px 18px 4px;\'><a style=\'color: #fff; text-decoration: none;\' href=\'?\'>New</a></div>';
 
         Object.keys(localStorage).sort().forEach((key) => {
             if (key.startsWith('accio_')) {
