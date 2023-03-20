@@ -25,12 +25,12 @@
 
         divList.innerHTML += '<div style=\'margin: 4px 4px 18px 4px;\'><a style=\'color: #fff; text-decoration: none;\' href=\'?\'>New</a></div>';
 
-        for (var key in localStorage) {
+        Object.keys(localStorage).sort().forEach((key) => {
             if (key.startsWith('accio_')) {
                 const n = key.substring(6);
                 divList.innerHTML += '<div style=\'margin: 4px;\'><a style=\'color: #fff; text-decoration: none;\' href=\'?' + n + '\'>' + n + '</a></div>';
             }
-        }
+        });
 
         textboxTitle.value = title;
         textboxContent.value = title == '' ? '' : localStorage.getItem('accio_' + title);
